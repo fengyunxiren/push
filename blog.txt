@@ -1,0 +1,3 @@
+my blog
+Author:feng
+in this part,you will learn how to push a blog using python script.
