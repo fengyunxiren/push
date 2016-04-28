@@ -18,6 +18,7 @@ def addAuthor(fname):
         spline=line.split(',')
         p=models.Author(name=spline[0],email=spline[1],website=spline[2])
         p.save()
+    f.close()
 
 
 def delAuthor(dname,demail='',dwebsite=''):
@@ -33,6 +34,7 @@ def delAuthor(dname,demail='',dwebsite=''):
 def addBlog(fname):
     f=open(fname)
     title=f.readline()
+    title=title.strip('\n')
     line=f.readline()
     spline=line.split(':')
     if (spline[0]=='author'or spline[0]=='Author') and len(spline)>=2:
